@@ -1,12 +1,19 @@
+{% assign colorCookie = block.settings.accept-button-text-color %}
+{% assign colorCross = block.settings.cross-color %}
+
 <div
   class="cookies-banner"
+  style="background-color: {{ block.settings.bg-color }}"
 >
   <div class="cookies-banner__section">
     <div class="cookies-banner__image">
       {% render "Cookies" %}
     </div>
 
-    <div class="cookies-banner__text">
+    <div
+      class="cookies-banner__message"
+      style="color: {{ block.settings.message-color }}"
+    >
       {{ block.settings.content }}
     </div>
   </div>
@@ -14,20 +21,22 @@
   <div class="cookies-banner__section">
     <button
       class="cookies-banner__accept-button cookie-button"
+      style="background-color: {{ block.settings.accept-button-color }}; color: {{ block.settings.accept-button-text-color }}"
     >
       <div>
-        {% render "Cookie_button" %}
+        {% render "Cookie_button", color: colorCookie %}
       </div>
       <span>Accept cookies</span>
     </button>
 
     <button
       class="cookies-banner__decline-button cookie-button"
+      style="background-color: {{ block.settings.decline-button-color }}; color: {{ block.settings.decline-button-text-color }}"
     >
       Decline
     </button>
 
-    {% render "Close_button" %}
+    {% render "Close_button", color: colorCross %}
   </div>
 </div>
 
@@ -43,6 +52,48 @@
         "id": "content",
         "type": "text",
         "default": "Our website use cookies."
+      },
+      {
+        "label": "Background Color",
+        "id": "bg-color",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "label": "Message Color",
+        "id": "message-color",
+        "type": "color",
+        "default": "#000000"
+      },
+      {
+        "label": "Accept Button Color",
+        "id": "accept-button-color",
+        "type": "color",
+        "default": "#FFC611"
+      },
+      {
+        "label": "Accept Button Text Color",
+        "id": "accept-button-text-color",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "label": "Decline Button Color",
+        "id": "decline-button-color",
+        "type": "color",
+        "default": "#ffffff"
+      },
+      {
+        "label": "Decline Button Text Color",
+        "id": "decline-button-text-color",
+        "type": "color",
+        "default": "#170F49"
+      },
+      {
+        "label": "Close Button Color",
+        "id": "cross-color",
+        "type": "color",
+        "default": "#170F49"
       }
     ]
   }
