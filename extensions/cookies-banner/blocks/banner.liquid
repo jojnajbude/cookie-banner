@@ -1,0 +1,44 @@
+<div
+  class="cookies-banner"
+>
+  <div class="cookies-banner__section">
+    <div class="cookies-banner__image">
+      {% render "Cookies" %}
+    </div>
+
+    <div class="cookies-banner__text">
+      {{ block.settings.content }}
+    </div>
+  </div>
+
+  <div class="cookies-banner__section">
+    <button
+      class="cookies-banner__accept-button"
+    >
+      {% render "Cookie_button" %}
+      Accept cookies
+    </button>
+
+    <button
+      class="cookies-banner__decline-button"
+    >
+      Decline
+    </button>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Cookie Banner",
+    "target": "body",
+    "stylesheet": "style.css",
+    "settings": [
+      {
+        "label": "Content",
+        "id": "content",
+        "type": "text",
+        "default": "Our website use cookies."
+      }
+    ]
+  }
+{% endschema %}

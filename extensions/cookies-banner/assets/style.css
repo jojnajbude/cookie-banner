@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+.cookies-banner {
+  font-family: 'DM Sans', sans-serif;
+
+  z-index: 1000;
+
+  padding: 50px;
+  position: fixed;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+
+  background-color: #fff;
+  border: 1px solid #d9dbe9;
+
+  box-shadow: 0px 14px 42px rgba(8, 15, 52, 0.06);
+  border-radius: 2px;
+}
+
+.cookies-banner__image {
+  display: flex;
+  height: min-content;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(0.4);
+}
+
+.cookies-banner__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+
+  max-width: 600px;
+}
+
+.cookies-banner__section {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.cookies-banner__accept-button {
+  padding: 20px 25px;
+  border: none;
+
+  background-color: #FFC611;
+  box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
+  border-radius: 56px;
+}
+
+@media (min-width: 640px) {
+  .cookies-banner {
+    left: 85px;
+    right: 85px;
+    bottom: 70px;
+  }
+
+  .cookies-banner__image {
+    transform: scale(1);
+  }
+}

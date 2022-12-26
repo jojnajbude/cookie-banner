@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@shopify/app": "3.30.1",
-    "@shopify/cli": "3.30.1"
+    "@shopify/cli": "3.30.1",
+    "sass": "^1.57.1"
   },
   "author": "andriy"
 }
