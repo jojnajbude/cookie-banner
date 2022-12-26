@@ -109,6 +109,16 @@
   background-color: transparent;
 }
 
+.cookies-banner__links-container {
+  display: none;
+}
+
+.cookies-banner__link {
+  color: #ffc611;
+
+  text-decoration: underline;
+}
+
 @media (min-width: 640px) {
   .cookies-banner { 
     flex-direction: row;

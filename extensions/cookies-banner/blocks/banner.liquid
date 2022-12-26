@@ -5,6 +5,12 @@
   class="cookies-banner"
   style="background-color: {{ block.settings.bg-color }}"
 >
+  <div class="cookies-banner__links-container">
+    {
+      "Privacy Policy": "{{ block.settings.privacy-policy }}",
+      "Terms of Conditions": "{{ block.settings.terms-of-conditions }}"
+    }
+  </div>
   <div class="cookies-banner__section">
     <div class="cookies-banner__image">
       {% render "Cookies" %}
@@ -94,6 +100,18 @@
         "id": "cross-color",
         "type": "color",
         "default": "#170F49"
+      },
+      {
+        "label": "Privacy Policy Link",
+        "id": "privacy-policy",
+        "type": "text",
+        "default": "/"
+      },
+      {
+        "label": "Terms of Conditions Link",
+        "id": "terms-of-conditions",
+        "type": "text",
+        "default": "/"
       }
     ]
   }
