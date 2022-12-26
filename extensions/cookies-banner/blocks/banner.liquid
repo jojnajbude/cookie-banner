@@ -13,17 +13,21 @@
 
   <div class="cookies-banner__section">
     <button
-      class="cookies-banner__accept-button"
+      class="cookies-banner__accept-button cookie-button"
     >
-      {% render "Cookie_button" %}
-      Accept cookies
+      <div>
+        {% render "Cookie_button" %}
+      </div>
+      <span>Accept cookies</span>
     </button>
 
     <button
-      class="cookies-banner__decline-button"
+      class="cookies-banner__decline-button cookie-button"
     >
       Decline
     </button>
+
+    {% render "Close_button" %}
   </div>
 </div>
 
@@ -32,6 +36,7 @@
     "name": "Cookie Banner",
     "target": "body",
     "stylesheet": "style.css",
+    "javascript": "script.js",
     "settings": [
       {
         "label": "Content",

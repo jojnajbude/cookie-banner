@@ -5,13 +5,16 @@
 
   z-index: 1000;
 
-  padding: 50px;
+  padding: 20px;
   position: fixed;
 
   display: flex;
+  flex-direction: column;
 
   justify-content: space-between;
   align-items: center;
+
+  gap: 20px;
   
   left: 20px;
   right: 20px;
@@ -30,12 +33,12 @@
   justify-content: center;
   align-items: center;
 
-  transform: scale(0.4);
+  transform: scale(0.6);
 }
 
 .cookies-banner__text {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 30px;
 
   max-width: 600px;
@@ -48,23 +51,100 @@
   gap: 20px;
 }
 
+.cookie-button {
+  cursor: pointer;
+  padding: 10px 15px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 56px;
+
+  transition: transform .3s;
+}
+
+.cookie-button:hover {
+  transform: scale(1.05);
+}
+
 .cookies-banner__accept-button {
-  padding: 20px 25px;
   border: none;
+
+  justify-content: space-between;
+  gap: 6px;
 
   background-color: #FFC611;
   box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
-  border-radius: 56px;
+
+  font-weight: 700;
+  color: #fff;
+}
+
+.cookies-banner__decline-button {
+  font-weight: 400;
+  color: #170F49;
+
+  background-color: #fff;
+
+  box-shadow: 0px 4px 8px rgba(74, 58, 255, 0.08);
+  border: 1px solid #EFF0F7;
+}
+
+.cookies-banner__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  border: none;
+  padding: 0;
+
+  background-color: transparent;
 }
 
 @media (min-width: 640px) {
+  .cookies-banner { 
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .cookies-banner__text {  
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
   .cookies-banner {
     left: 85px;
     right: 85px;
     bottom: 70px;
+
+    
+    padding: 50px;
   }
 
   .cookies-banner__image {
     transform: scale(1);
+  }
+
+  .cookies-banner__text {
+    font-size: 18px;
+
+    max-width: 600px;
+  }
+
+  .cookie-button {
+    padding: 20px 25px;
+
+    font-size: 16px;
+  }
+
+  .cookies-banner__close-button {
+    position: static;
+    
+    margin-left: 15px;
   }
 }
