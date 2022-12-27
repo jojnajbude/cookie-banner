@@ -5,12 +5,6 @@
   class="cookies-banner"
   style="background-color: {{ block.settings.bg-color }}"
 >
-  <div class="cookies-banner__links-container">
-    {
-      "Privacy Policy": "{{ block.settings.privacy-policy }}",
-      "Terms of Conditions": "{{ block.settings.terms-of-conditions }}"
-    }
-  </div>
   <div class="cookies-banner__section">
     <div class="cookies-banner__image">
       {% render "Cookies" %}
@@ -20,7 +14,7 @@
       class="cookies-banner__message"
       style="color: {{ block.settings.message-color }}"
     >
-      {{ block.settings.content }}
+      {{ block.settings.message }}
     </div>
   </div>
 
@@ -54,10 +48,10 @@
     "javascript": "script.js",
     "settings": [
       {
-        "label": "Content",
-        "id": "content",
-        "type": "text",
-        "default": "Our website use cookies."
+        "label": "Message",
+        "id": "message",
+        "type": "richtext",
+        "default": "<p>Our website use cookies.</p>"
       },
       {
         "label": "Background Color",
@@ -100,18 +94,6 @@
         "id": "cross-color",
         "type": "color",
         "default": "#170F49"
-      },
-      {
-        "label": "Privacy Policy Link",
-        "id": "privacy-policy",
-        "type": "text",
-        "default": "/"
-      },
-      {
-        "label": "Terms of Conditions Link",
-        "id": "terms-of-conditions",
-        "type": "text",
-        "default": "/"
       }
     ]
   }
